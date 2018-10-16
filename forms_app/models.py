@@ -2,11 +2,12 @@ from django.db import models
 from datetime import datetime
 
 
-class FormModel(models.Model):
+class FormModel2(models.Model):
     name = models.CharField(max_length=100)
-    recipe = models.CharField(max_length=500)
-    timeCook = models.IntegerField()
-    dateCreated = models.DateTimeField(default=datetime.now)
+    address = models.CharField(max_length=500)
+    budget = models.IntegerField()
+    numOfEmployees = models.IntegerField()
+    establishedDate = models.DateField(default=datetime.now)
 
     def __str__(self):
         return self.name

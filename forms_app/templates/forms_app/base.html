@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Mem Non-Profits</title>
+    <link rel="stylesheet" href="{% static 'forms_app/bootstrap.css' %}"/>
+</head>
+<div class="jumbotron">
+    <h1 style="color: #abdde5">Memphis Non-Profits</h1>
+    <a style="color: #abdde5" href="{% url 'add' %}">+ New Entry</a>
+</div>
+<body>
+{% block body %}
+{% endblock %}
+<script src="{% static 'forms_app/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'forms_app/bootstrap.js' %}"></script>
+</body>
+</html>
