@@ -3,19 +3,29 @@
 {% block body %}
 
 	{% if form_list %}
+		<div class="row">
 			{% for eachItem in form_list %}
-				<div class="container" align="middle">
-					<h3 class="display-4">{{ eachItem.name }}</h3>
-					<p class="lead">Located at: {{eachItem.address}}</p>
-					<p>Budget: $ {{eachItem.budget}}</p>
-					<p>Employees: {{eachItem.numOfEmployees}}</p>
-					<p>Since: {{eachItem.establishedDate}}</p>
-				<span>
-					<a class="btn btn-primary btn-sm" href="{% url 'edit' pk=eachItem.pk %}" role="button">Edit</a>
-					<a class="btn btn-primary btn-sm" href="{% url 'delete' pk=eachItem.pk %}" role="button">Delete</a>
-				</span>
-					<hr/>
+
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-header" align="middle">
+								<h3 class="display-4">{{ eachItem.name }}</h3>
+							</div>
+							<div class="card-body" align="middle">
+								<p class="card-text">Located at: {{eachItem.address}}</p>
+								<p class="card-text">Budget: $ {{eachItem.budget}}</p>
+								<p class="card-text">Employees: {{eachItem.numOfEmployees}}</p>
+								<p class="card-text">Since: {{eachItem.establishedDate}}</p>
+								<span>
+									<a class="btn btn-primary btn-sm" href="{% url 'edit' pk=eachItem.pk %}" role="button">Edit</a>
+									<a class="btn btn-primary btn-sm" href="{% url 'delete' pk=eachItem.pk %}" role="button">Delete</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				<br>
 			{% endfor %}
+		</div>
 		{% else %}
 		<p>Nothing available.</p>
 	{% endif %}

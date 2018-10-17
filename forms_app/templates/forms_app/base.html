@@ -8,12 +8,19 @@
 </head>
 <div class="jumbotron">
     <h1 style="color: #abdde5">Memphis Non-Profits</h1>
-    <a style="color: #abdde5" href="{% url 'add' %}">+ New Entry</a>
+    <div class="select2-container--below">
+        <a style="color: #abdde5" href="{% url 'add' %}">+ New Entry</a>
+    </div>
 </div>
+
 <body>
 {% block body %}
 {% endblock %}
 <script src="{% static 'forms_app/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'forms_app/bootstrap.js' %}"></script>
 </body>
+<footer class="page-footer font-small blue">
+    <br>
+    Web Page Developed By: <a href="{% url 'about' %}">Madisonne Cooper</a>
+</footer>
 </html>

@@ -9,6 +9,9 @@ def index(request):
     context = {'form_list': form_list}
     return render(request, 'forms_app/index.html', context)
 
+def about(request):
+    return render(request, 'forms_app/about.html')
+
 def addEntry(request):
     if request.method == 'POST':
         form = EntryForm(request.POST)
